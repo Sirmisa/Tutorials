@@ -1,0 +1,39 @@
+Resources:
+A.- https://www.baeldung.com/java-abstract-factory-pattern
+    https://github.com/eugenp/tutorials/blob/master/patterns/design-patterns-creational/src/main/java/com/baeldung/creational/abstractfactory/AbstractFactory.java
+B.- https://en.wikipedia.org/wiki/Abstract_factory_pattern
+    http://designpattern.co.il/AbstractFactory.html
+C.- https://www.javatpoint.com/abstract-factory-pattern
+Steps to implement the Abstract Factory pattern
+1.- Identify the products that the factory will produce
+Products
+- People - Interface
+- Animal - Abstract
+
+2.- Create the concrete classes by implementing the interfaces
+Implementations for People
+- American
+- African
+- Asian
+- European
+
+Implementations for Animals
+- Feline
+- Canine
+- equine
+
+3.- Create the abstract factory (could be interface or abstract class) that knows what type of objects we are creating
+    abstract class AbstractFactory{
+      public abstract Object create(String type) ;
+    }
+
+    public interface AbstractFactory<T> {
+        T create(String type) ;
+    }
+
+4.- Create the factories that will inherit from the previous abstract factory and that are created based
+on the products you want to create
+Factories
+- PeopleFactory
+- AnimalFactory
+
