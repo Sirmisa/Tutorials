@@ -19,6 +19,7 @@ local.properties
 .vscode/
 test.app.iml
 Factory.iml
+out/
 
 # External tool builders
 .externalToolBuilders/
